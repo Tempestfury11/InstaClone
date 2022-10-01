@@ -24,7 +24,7 @@
 
         <q-toolbar-title
         class="text-grand-hotel text-bold">
-          Quasargram
+          InstaClone
         </q-toolbar-title>
 
         <q-btn
