@@ -35,7 +35,7 @@
           <q-card-section>
             <div>{{post.caption}}</div>
             <div class="text-caption text-grey">
-              {{ post.date | niceDate }}
+              {{ niceDate(post.date)}}
             </div>
           </q-card-section>
 
@@ -110,7 +110,7 @@ export default defineComponent({
       ]
     }
   },
-  filters: {
+  methods: {
     niceDate(value) {
       return date.formatDate(value, 'MMMM D h:mmA')
     }

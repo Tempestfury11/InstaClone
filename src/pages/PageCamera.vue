@@ -1,6 +1,7 @@
 <template>
   <q-page class="constrain-more q-pa-md">
     <div class="camera-frame q-pa-md">
+
       <video
       v-show="!imageCaptured"
       ref="video"
@@ -125,7 +126,7 @@ export default defineComponent({
       let canvas = this.$refs.canvas
       canvas.width = video.getBoundingClientRect().width
       canvas.height = video.getBoundingClientRect().height
-      let context = canvas.getContext('2D')
+      let context = canvas.getContext('2d')
       context.drawImage(video, 0, 0, canvas.width, canvas.height)
       this.imageCaptured = true
       this.post.photo = this.dataURItoBlob(canvas.toDataURL())
